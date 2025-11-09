@@ -17,6 +17,7 @@ import {
 import RouterNavMainSecond from "@/routers/RouterNavMainSecond";
 import { useState } from "react";
 import { NavLink, useLocation } from "react-router";
+import { DynamicIcon } from "lucide-react/dynamic";
 
 export function NavMainSecond() {
   const [openIndex, SetOpenIndex] = useState<string>("");
@@ -40,7 +41,7 @@ export function NavMainSecond() {
             <SidebarMenuItem>
               <CollapsibleTrigger asChild>
                 <SidebarMenuButton tooltip={item.title}>
-                  {item.icon && <item.icon />}
+                  {item.icon && <DynamicIcon name={item.icon} />}
                   <span>{item.title}</span>
                   <ChevronRight className="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" />
                 </SidebarMenuButton>

@@ -6,6 +6,7 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 import RouterNavMain from "@/routers/RouterNavMain";
+import { DynamicIcon } from "lucide-react/dynamic";
 import { NavLink } from "react-router";
 
 export function NavMain() {
@@ -16,7 +17,7 @@ export function NavMain() {
           <SidebarMenuItem key={item.title}>
             <SidebarMenuButton tooltip={item.title} asChild>
               <NavLink to={item.path}>
-                {item.icon && <item.icon />}
+                {item.icon && <DynamicIcon name={item.icon} />}
                 <span>{item.title}</span>
               </NavLink>
             </SidebarMenuButton>

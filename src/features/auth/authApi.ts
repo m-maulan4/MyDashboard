@@ -1,6 +1,6 @@
 // src/features/auth/authApi.ts
 import { createApi } from "@reduxjs/toolkit/query/react";
-import { baseQueryWithReauth } from "@/features/baseQuery";
+import { baseQueryWithReauth } from "@/api/baseQuery";
 
 interface LoginRequest {
   username: string;

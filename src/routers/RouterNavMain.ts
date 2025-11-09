@@ -1,17 +1,17 @@
-import Home from "@/pages/Home";
-import { HomeIcon, type LucideIcon } from "lucide-react";
 import type React from "react";
+import type { IconName } from "lucide-react/dynamic";
+import Home from "@/pages/Home";
 
 interface RouterDataProps {
   title: string;
-  icon?: LucideIcon;
+  icon: IconName;
   path: string;
   component: React.ComponentType;
 }
 const RouterNavMain: RouterDataProps[] = [
   {
     title: "Home",
-    icon: HomeIcon,
+    icon: "house",
     path: "/",
     component: Home,
   },

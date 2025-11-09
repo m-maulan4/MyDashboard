@@ -1,10 +1,10 @@
 import Keuangan from "@/pages/Keuangan";
-import { Banknote, type LucideIcon } from "lucide-react";
+import type { IconName } from "lucide-react/dynamic";
 import type React from "react";
 
 interface RouterDataProps {
   title: string;
-  icon?: LucideIcon;
+  icon: IconName;
   path: string;
   items: [
     {
@@ -17,7 +17,7 @@ interface RouterDataProps {
 const RouterNavMainSecond: RouterDataProps[] = [
   {
     title: "Keuangan",
-    icon: Banknote,
+    icon: "house",
     path: "keuangan",
     items: [
       {
