@@ -8,7 +8,7 @@ import type {
 import { setCredentials, logout } from "@/features/auth/authSlice";
 
 const baseQuery = fetchBaseQuery({
-  baseUrl: "http://localhost:4000",
+  baseUrl: import.meta.env.VITE_API_URL,
   credentials: "include", // penting agar refreshToken di cookie ikut
   // prepareHeaders: (headers, { getState }) => {
   //   const token = (getState() as RootState).auth.access_token;
