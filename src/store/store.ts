@@ -2,17 +2,20 @@ import { configureStore } from "@reduxjs/toolkit";
 import { authApi } from "../features/auth/authApi";
 import authReducer from "../features/auth/authSlice";
 import { todoApi } from "@/features/todo/todoApi";
+import { financeApi } from "@/features/finance/financeApi";
 // --- store ---
 export const store = configureStore({
   reducer: {
     auth: authReducer,
     [authApi.reducerPath]: authApi.reducer,
     [todoApi.reducerPath]: todoApi.reducer,
+    [financeApi.reducerPath]: financeApi.reducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware()
       .concat(authApi.middleware)
-      .concat(todoApi.middleware),
+      .concat(todoApi.middleware)
+      .concat(financeApi.middleware),
 });
 
 export type RootState = ReturnType<typeof store.getState>;
