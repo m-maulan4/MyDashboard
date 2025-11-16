@@ -33,3 +33,12 @@ export interface postDompet {
 export interface FormAddTransaksiProps {
   onSubmitSuccess: (status: boolean) => void;
 }
+export interface widgetOverview {
+  title: string;
+  jumlah: number;
+  type: number;
+}
+export interface getOverview {
+  uangMasuk: widgetOverview;
+  uangKeluar: widgetOverview;
+}

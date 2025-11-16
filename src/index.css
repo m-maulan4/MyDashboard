@@ -137,6 +137,14 @@
   .btn-red {
     @apply bg-red-700 hover:bg-red-800 text-white;
   }
+  .h6,
+  h6 {
+    @apply text-base font-semibold;
+  }
+  .h5,
+  h5 {
+    @apply text-lg font-semibold;
+  }
   .h4,
   h4 {
     @apply text-xl font-semibold;

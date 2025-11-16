@@ -4,6 +4,7 @@ import type { transaksiType } from "./transactions/components/colomns";
 import type {
   getDompet,
   getKategori,
+  getOverview,
   postDompet,
   postKategori,
   postTransaksi,
@@ -15,6 +16,10 @@ export const financeApi = createApi({
   baseQuery: baseQueryWithReauth,
   tagTypes: ["transaksi", "kategori", "dompet"],
   endpoints: (builder) => ({
+    getOverview: builder.query<getOverview, void>({
+      query: () => "/keuangan/overview",
+      providesTags: ["transaksi"],
+    }),
     getAllTransaksi: builder.query<transaksiType[], void>({
       query: () => "/keuangan/transaksi",
       providesTags: ["transaksi"],
@@ -58,6 +63,7 @@ export const {
   useGetAllTransaksiQuery,
   useGetAllDompetQuery,
   useGetAllKategoriQuery,
+  useGetOverviewQuery,
   usePostTransaksiMutation,
   usePostKategoriMutation,
   usePostDompetMutation,

@@ -1,4 +1,5 @@
 import BidangPage from "@/features/akpd/bidang";
+import OverViewPage from "@/features/finance/overview";
 import SettingPage from "@/features/finance/setting";
 import TransactionsPage from "@/features/finance/transactions";
 import Keuangan from "@/layout/Keuangan";
@@ -36,7 +37,7 @@ const RouterNavMainSecond: RouterDataProps[] = [
       {
         title: "Laporan",
         path: "laporan",
-        component: Keuangan,
+        component: OverViewPage,
       },
       {
         title: "Transaksi",
